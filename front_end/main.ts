@@ -29,10 +29,6 @@ class Sprite {
       this.dest_y = y;
     }
   
-    ignore_click(x: number, y: number) {
-      // Implement as needed
-    }
-  
     move(dx: number, dy: number) {
       this.dest_x = this.x + dx;
       this.dest_y = this.y + dy;
@@ -50,10 +46,7 @@ class Sprite {
       else if (this.y > this.dest_y)
         this.y -= Math.min(this.y - this.dest_y, this.speed);
     }
-  
-    sit_still() {
-      // Implement as needed
-    }
+
   }
   
   class Model {
@@ -103,7 +96,7 @@ class Sprite {
       const ctx = this.canvas.getContext("2d");
   
       if (ctx === null) {
-        // Handle the case where ctx is null (e.g., fallback or error handling)
+        // Handle the case where ctx is null
         return;
       }
   
